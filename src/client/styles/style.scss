@@ -1,0 +1,163 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+}
+.main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header, footer {
+    background-color: teal;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 10vh;
+    color: antiquewhite;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    background-color: antiquewhite;
+    max-width: 1250px;
+    margin: auto;
+}
+.imageHolder {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imgDiv {
+    max-width: 500px;
+    height: 300px;
+    margin-right: 15px;
+}
+.imgDiv:last-child {
+    margin-right: 0px;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.inputHolder {
+    display: flex;
+    padding: 10px;
+}        
+.tripInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10px;
+}
+.tripInput label {
+    margin-bottom: 5px;
+}
+.tripInput input {
+    padding: 10px;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid white;
+    letter-spacing: 1.2px;
+    transition: ease-in-out .3s;
+}
+input:focus {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+.tripInput:last-child {
+    margin-right: 0px;
+}
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+#generate {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: ease-in-out .3s;
+    margin-bottom: 10px;
+}
+.result {
+    padding: 10px;
+    display: none;
+}
+#generate:hover {
+    color: teal;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+.div1 .title {
+    text-align: center;
+}
+.div2 {
+    display: flex;
+    margin-top: 10px;
+}
+.div2 strong {
+    font-weight: bold;
+    font-size: 20px;
+}
+#imgDiv {
+    margin-right: 10px;
+}
+#imgDiv img {
+    max-width: 600px;
+    height: auto;
+}
+@media(max-width: 600px) {
+    .div2 {
+        flex-direction: column;
+    }
+    #imgDiv {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+}
+@media(max-width: 600px) {
+    .inputHolder {
+        flex-direction: column;
+    }  
+    .tripInput {
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    #generate {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0px;
+    }
+}
+@media(max-width: 1250px) {
+    section {
+        width: 100%;
+    }
+}
+@media(max-width: 750px) {
+    .imageHolder {
+        flex-direction: column;
+    }
+    .imgDiv {
+        display: none;
+    }
+    .imgDiv:first-child {
+        display: block;
+        margin-right: 0px;
+    }
+}

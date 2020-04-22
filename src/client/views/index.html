@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App - Home</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <h1>Plan Your Travel</h1>
+        </header>
+        <section>
+            <div class="imageHolder">
+                <div class="imgDiv">
+                    <img src="/src/client/media/travel2.jpg" alt="Image">                    
+                </div>
+                <div class="imgDiv">
+                    <img src="/src/client/media/planning.png" alt="Image">                    
+                </div>
+                <div class="imgDiv">
+                    <img src="/src/client/media/travel3.jpg" alt="Image">                    
+                </div>
+            </div>
+            <div class="inputHolder">
+                <div class="tripInput">
+                    <label for="city">Destination</label>
+                    <input type="text" id="city" placeholder="Enter city name...">
+                </div>
+                <div class="tripInput">
+                    <label >Arrival Date</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="tripInput">
+                    <label >Departure Date</label>
+                    <input type="date" id="dateEnd">
+                </div>
+            </div>
+            <button id="generate" type="submit"> click twice </button>
+            <div class="result" id="entryHolder">
+                <div class="div1">
+                    <h2 class = "title">Your upcoming trip to <span id = "country"></span> is <span id = "daysAway"></span></h2>
+                </div>
+                <div class="div2">
+                    <div id="imgDiv"></div>
+                    <div>
+                        <div class="infoHolder">
+                            Your stay will be for <span id = "tripLength"></span>
+                        </div>
+                        <div class="infoHolder weather">
+                            <strong>Typical Weather: </strong> <span id = "weather"></span> 
+                        </div>
+                        <div class="infoHolder">
+                            <strong>Latitude: </strong> <span id = "lat"></span>
+                        </div>
+                        <div class="infoHolder">
+                            <strong>Logitude: </strong> <span id = "long"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p> Made in @2020</p>
+        </footer>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
